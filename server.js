@@ -1,6 +1,6 @@
 import { createServer } from 'node:http';
 import fs from 'node:fs';
-const image = fs.readFileSync('/IMG_3905.jpg')
+const image = fs.readFileSync('IMG_3905.jpg')
 
 const server = createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'image/jpeg' });
