@@ -5,7 +5,6 @@ const app = express();
 const image = fs.readFileSync('cat.png');
 
 app.get('/', (req, res) => {
-    res.set('Content-Type', 'image/png');
     res.send(image);
 });
 
