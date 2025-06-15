@@ -1,10 +1,10 @@
 import { createServer } from 'node:http';
-import fs from 'node.fs'
-const image = fs.ReadFile('/IMG_3905.jpg')
+import fs from 'node:fs';
+const image = fs.readFile('/IMG_3905.jpg')
 
 const server = createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'image/jpg' });
-    res.end('Hello World!\n');
+    res.writeHead(200, { 'Content-Type': 'image/jpeg' });
+    res.end(image);
 });
 
 server.listen(3000, '127.0.0.1', () => {
